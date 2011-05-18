@@ -302,7 +302,7 @@ def createEpubDirectory(directory, username, results):
                 template = env.get_template(template_file)
                 rendered = template.render(context)
                 output = open(os.path.join(root, template_file), 'w')
-                output.write(rendered)
+                output.write(rendered.encode('utf-8'))
                 output.close()
 
 
